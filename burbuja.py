@@ -32,13 +32,17 @@ Función para ordenar un arreglo con algoritmo burbuja, toma como parametros un 
 ******************************************************************************************"""
 def burbuja(arreglo):
     swap_count = 1                                                  ##Variable utilizada para saber cuantas veces se realiza un cambio de posición de valores
+    global operaciones
+    operaciones = 0 
     while True:
         swap_count=0
         for i in range(len(arreglo)-1):
+            operaciones = operaciones + 1
             swap_count = swap_count + swap(arreglo, i,i+1)
+        
         if swap_count == 0 :
             break
-    return arreglo
+    return operaciones
         
 
 """******************************************************************************************
@@ -50,6 +54,8 @@ el arreglo  y los indices de los valores a cambiar
 ******************************************************************************************"""
 def swap(arreglo, l,u):
     if arreglo[l]>arreglo[u]:
+        global operaciones
+        operaciones = operaciones + 3
         aux=arreglo[l]
         arreglo[l]=arreglo[u]
         arreglo[u]=aux
@@ -62,9 +68,10 @@ def swap(arreglo, l,u):
 ###########################################################################
 #Ejemmplo
 ###########################################################################
-p = ran_num(100)
+p = ran_num(10)
 print("Arreglo desordenado", p)
 print()
-burbuja(p)
+num = burbuja(p)
 
 print("Arreglo ordenado" ,p)
+print("Número de operaciones : " + str(num) )
