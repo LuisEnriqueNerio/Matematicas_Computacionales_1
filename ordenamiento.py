@@ -69,9 +69,3 @@ print()
 p=ordenar(p)
 print("Arreglo ordenado" ,p)
 print("Número de operaciones : " + str(operaciones)) 
-
-p = ran_num(100)
-p_2= ordenar(p)
-
-
-    

@@ -88,4 +88,4 @@ print()
 num = quicksort(p, 0, len(p)-1)
 print("Arreglo ordenado" ,p)
 print("Número de operaciones : " + str(num) )
-            
+
