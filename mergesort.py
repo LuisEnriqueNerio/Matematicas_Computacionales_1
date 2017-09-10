@@ -9,9 +9,9 @@ import random
 
 """******************************************************************************************
 ############################################################################################
-                                            swap
-Función que realiza un intercambio de posición de valores dentro de un arreglo, toma como parametros
-el arreglo  y los indices de los valores a cambiar
+ Función para crear números aleatorios, toma como parametros n, que es la cantidad de números
+que deseas y  lim_inf y lim_sup que son parametros para indicar el intervalo en el que deben
+estar los números aleatorios generados                                          
 ############################################################################################
 ******************************************************************************************"""
 def ran_num(n,lim_inf=0, lim_sup=100):
