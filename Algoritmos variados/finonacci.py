@@ -6,7 +6,7 @@ Created on Wed Oct  4 11:15:40 2017
 """
 
 d={0:1, 1:1 }
-
+import matplotlib.pyplot as plt
 ope_fib = 0
 ope_fib_efi=0 
 ope_fib_sim=0
@@ -36,7 +36,7 @@ def fibnc_simple(n):
         return 1
     r, r1,r2=0,1,1
     for i in range(2,n+1):
-        ope_fib_sim+=1
+        ope_fib_sim+=3
         r = r1+r2
         r2=r1
         r1=r
@@ -60,4 +60,8 @@ for i in range(0,30):
     op_eficiente.append(ope_fib_efi)
     op_recursivo.append(ope_fib)
     
+plt.plot(numero,op_simple)
+plt.plot(numero,op_eficiente)
+plt.plot(numero,op_recursivo)
+
         
